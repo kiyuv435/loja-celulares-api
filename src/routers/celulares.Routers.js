@@ -1,4 +1,8 @@
-    celularesRoutes.get("/". async (req, res) => {
+import { Router } from "express";
+import { celularesService } from "../services/celulares.Services.js";
+export const celularesRouter = Router()
+    
+ class celularesRoutes.get("/". async (req, res) => {
         const celulares = await celularesService.getAll();
     });
 

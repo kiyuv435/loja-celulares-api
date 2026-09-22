@@ -1,3 +1,5 @@
+import { pool } from "../database/db.js";
+
 class celularesService {
     async getAll(){
         const res = await pool.query("SELECT * FROM celulares");
@@ -9,3 +11,5 @@ class celularesService {
     return res.rows(0);
     }
 }
+
+export const celularesService = new celularesService()
