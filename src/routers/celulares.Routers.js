@@ -1,4 +1,3 @@
-    impo
     celularesRoutes.get("/". async (req, res) => {
         const celulares = await celularesService.getAll();
     });
