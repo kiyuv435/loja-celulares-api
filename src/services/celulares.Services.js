@@ -1,15 +1,10 @@
-import { pool } from "../database/db.js";
+import { pool } from "../database/db.js"
 
-class celularesService {
-    async getAll(){
-        const res = await pool.query("SELECT * FROM celulares");
-        return res.rows;
-    }
-
-    async creats(dados){
-    const res = await pool.query("INSERT INTO... RETURNING *", [dados]);
-    return res.rows(0);
+class CelularesService {
+    async listarCelulares(){
+        const res = await pool.query("SELECT * FROM celulares")
+        return res.rows
     }
 }
 
-export const celularesService = new celularesService()
+export const celularesService = new CelularesService()

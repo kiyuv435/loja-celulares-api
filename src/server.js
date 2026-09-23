@@ -1,4 +1,5 @@
 import express from 'express'
+import { celularesRouter } from './routers/celulares.Routers.js'
 
 const app = express()
 const port = 3000
